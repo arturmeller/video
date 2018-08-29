@@ -12,7 +12,7 @@ node {
     }
     
     stage('Deploy to production') {
-        docker.withServer('tcp://ockerprodlinuxnode1.westeurope.cloudapp.azure.com') {
+        docker.withServer('tcp://dockerprodlinuxnode1.westeurope.cloudapp.azure.com') {
             sh 'docker run -d arturmeller/sample-app'
          }
     }
