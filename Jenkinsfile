@@ -12,7 +12,7 @@ node {
     }
     
     stage('Deploy to production') {
-        docker.withServer('tcp://dockerprodlinuxnode1', 'dockerprodlinuxnode1credentials') {
+        docker.withServer('tcp://dockerprodlinuxnode1') {
             sh 'docker run -d arturmeller/sample-app'
          }
     }
