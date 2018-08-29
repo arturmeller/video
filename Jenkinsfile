@@ -16,4 +16,4 @@ node {
             sh 'docker run -d arturmeller/sample-app'
          }
     }
-|}    
+}    
