@@ -7,7 +7,7 @@ node {
     
     stage('Publish to Docker Hub') {
       docker.withRegistry("https://index.docker.io/v1/", "dockerhubcredentials") {
-          app.push('env.BUILD_ID')
+          app.push(env.BUILD_ID)
       }
     }
     
