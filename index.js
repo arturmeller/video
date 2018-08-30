@@ -1,8 +1,9 @@
 const http = require('http')
 const port = 3000
+const os = require('os')
 
 const requestHandler = (request, response) => {
-  response.end('Hello from inside Docker!!! + Inside new container version 2\n')
+  response.end('Hello from inside Docker node + os.hostname() + \n')
 }
 
 const server = http.createServer(requestHandler)
