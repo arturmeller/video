@@ -3,7 +3,7 @@ const port = 3000
 const os = require('os')
 
 const requestHandler = (request, response) => {
-  response.end('Hello from inside Docker node + os.hostname() + \n')
+  response.end('Hello from inside Docker node' + os.hostname() + '\n')
 }
 
 const server = http.createServer(requestHandler)
