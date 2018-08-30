@@ -13,7 +13,7 @@ node {
     
     stage('Deploy to production') {
         docker.withServer('tcp://dockerprodlinuxnode1.westeurope.cloudapp.azure.com') {
-            sh 'docker service update --image arturmeller/sample-app:${env.BUILD_ID} sample'
+            sh "docker service update --image arturmeller/sample-app:${env.BUILD_ID} sample"
          }
     }
 }    
